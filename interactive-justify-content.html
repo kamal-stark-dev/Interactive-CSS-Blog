@@ -122,7 +122,7 @@
           <div class="elements"></div>
           <div class="elements"></div>
         </div>
-        <h2>{ justify-content : <span>center</span>;}</h2>
+        <h2>{ justify-content : <span id="change-justify">flex-start</span>;}</h2>
         <div class="interactive-section">
           <label for="justify-property">Choose a property for 'justify-content':</label>
           <select name="justify-property" id="justify-property">
@@ -168,6 +168,10 @@
 
         // Set the justify-content property
         container.style.justifyContent = selectedValue;
+
+      var text = document.getElementById("change-justify");
+
+      text.innerHTML = selectedValue;
       }
 
       // Listen for changes to the select element
