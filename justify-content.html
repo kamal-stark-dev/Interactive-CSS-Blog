@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Justify Content Property</title>
+    <link rel="icon" href="assets/css-icon.png" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="js/main.js" defer></script>
+    <style>
+      :root {
+        --holder-color: #a0ddff;
+        --element-color: #6975ff;
+      }
+      .dark-mode {
+        --holder-color: #c7fff9;
+        --element-color: #ffba33;
+      }
+      body {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .holder {
+        display: flex;
+        align-items: center;
+        height: 30vh;
+        width: 85%;
+        background-color: var(--holder-color);
+        border: 2px solid black;
+        gap: 20px;
+        border-radius: 10px;
+      }
+      .elements {
+        width: 15%;
+        aspect-ratio: 1/1;
+        border: 2px solid black;
+        background-color: var(--element-color);
+        border-radius: 12px;
+      }
+      .ex-1 {
+        justify-content: center;
+      }
+      .ex-2 {
+        justify-content: flex-start;
+      }
+      .ex-3 {
+        justify-content: flex-end;
+      }
+      .ex-4 {
+        justify-content: space-around;
+      }
+      .ex-5 {
+        justify-content: space-between;
+      }
+      .ex-6 {
+        justify-content: space-evenly;
+      }
+      @media screen and (max-width: 900px) {
+        body {
+          padding: 0 40px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        h2 {
+          font-size: 22px;
+        }
+        .holder {
+          height: 15vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="icon">
+        <img src="assets/logo-navbar.png" alt="main-logo" />
+        <h2>Starky Developers</h2>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="#" class="hamburger-menu"
+              ><img src="assets/hamburger-menu.png"
+            /></a>
+          </li>
+          <li><a href="index.html"">Home</a></li>
+          <li><a href="justify-content.html" class="active">Examples</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><img src="assets/light-dark-mode.png" id="light-dark-mode" /></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Justify Content Property</h1>
+    <hr />
+
+    <p class="content-info">
+      The <span>"justify-content"</span> property in CSS is used to
+      <span>align flex items along the main axis</span> of a flex container. It
+      is primarily used in conjunction with the "display: flex" or "display:
+      inline-flex" properties applied to a parent container.
+    </p>
+
+    <div class="box">
+      <div class="container">
+        <!-- justify-content ~ center -->
+        <div class="holder ex-1">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>center</span>;}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <!-- justify-content ~ flex-start -->
+        <div class="holder ex-2">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>flex-start</span>;}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <!-- justify-content ~ flex-end -->
+        <div class="holder ex-3">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>flex-end</span>;}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <!-- justify-content ~ space-around -->
+        <div class="holder ex-4">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>space-around</span>;}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <!-- justify-content ~ space-between -->
+        <div class="holder ex-5">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>space-between</span>;}</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <!-- justify-content ~ space-evenly -->
+        <div class="holder ex-6">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>space-evenly</span>;}</h2>
+      </div>
+    </div>
+
+    <hr />
+    <div class="copyright-section">
+      <h3>
+        &copy; Copyright Protection 2023 |
+        <a href="https://www.instagram.com/kamal_stark_18" target="_blank"
+          >Starky Developers</a
+        >
+      </h3>
+      <span class="contact-span">
+        <p>
+          to use these exapmles ->
+          <a href="https://www.instagram.com/kamal_stark_18" target="_blank"
+            >contact us</a
+          >
+        </p>
+      </span>
+    </div>
+  </body>
+</html>

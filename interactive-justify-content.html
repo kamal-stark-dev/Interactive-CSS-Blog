@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Interactive Justify Content Property</title>
+    <link rel="icon" href="assets/css-icon.png" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/interactive-justify-content.js" defer></script>
+    <style>
+      :root {
+        --holder-color: #a0ddff;
+        --element-color: #6975ff;
+      }
+      .dark-mode {
+        --holder-color: #c7fff9;
+        --element-color: #ffba33;
+      }
+      body {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .holder {
+        display: flex;
+        align-items: center;
+        height: 30vh;
+        width: 85%;
+        background-color: var(--holder-color);
+        border: 2px solid black;
+        gap: 20px;
+        border-radius: 10px;
+        transition: all 1s;
+      }
+      .elements {
+        width: 15%;
+        aspect-ratio: 1/1;
+        border: 2px solid black;
+        background-color: var(--element-color);
+        border-radius: 12px;
+      }
+      .center {
+        justify-content: center;
+      }
+      .flex-start {
+        justify-content: flex-start;
+      }
+      .flex-end {
+        justify-content: flex-end;
+      }
+      .space-around {
+        justify-content: space-around;
+      }
+      .space-between {
+        justify-content: space-between;
+      }
+      .space-evenly {
+        justify-content: space-evenly;
+      }
+      @media screen and (max-width: 900px) {
+        body {
+          padding: 0 40px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        h2 {
+          font-size: 22px;
+        }
+        .holder {
+          height: 15vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="icon">
+        <img src="assets/logo-navbar.png" alt="main-logo" />
+        <h2>Starky Developers</h2>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="#" class="hamburger-menu"
+              ><img src="assets/hamburger-menu.png"
+            /></a>
+          </li>
+          <li><a href="index.html"">Home</a></li>
+          <li><a href="justify-content.html" class="active">Examples</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><img src="assets/light-dark-mode.png" id="light-dark-mode" /></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Interactive Justify Content Property</h1>
+    <hr />
+
+    <p class="content-info">
+      The <span>"justify-content"</span> property in CSS is used to
+      <span>align flex items along the main axis</span> of a flex container. It
+      is primarily used in conjunction with the "display: flex" or "display:
+      inline-flex" properties applied to a parent container.
+    </p>
+
+    <div class="box">
+      <div class="container">
+        <div class="holder example" id="justify-content-holder">
+          <div class="elements"></div>
+          <div class="elements"></div>
+          <div class="elements"></div>
+        </div>
+        <h2>{ justify-content : <span>center</span>;}</h2>
+        <div class="interactive-section">
+          <label for="justify-property">Choose a property for 'justify-content':</label>
+          <select name="justify-property" id="justify-property">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-evenly">space-evenly</option>
+            <option value="space-around">space-around</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="copyright-section">
+      <h3>
+        &copy; Copyright Protection 2023 |
+        <a href="https://www.instagram.com/kamal_stark_18" target="_blank"
+          >Starky Developers</a
+        >
+      </h3>
+      <span class="contact-span">
+        <p>
+          to use these exapmles ->
+          <a href="https://www.instagram.com/kamal_stark_18" target="_blank"
+            >contact us</a
+          >
+        </p>
+      </span>
+    </div>
+
+    <script>
+      function changeJustifyContent() {
+        // Get the select element
+        var selectElement = document.getElementById("justify-property");
+
+        // Get the selected value
+        var selectedValue = selectElement.value;
+
+        // Get the flex container
+        var container = document.getElementById("justify-content-holder");
+
+        // Set the justify-content property
+        container.style.justifyContent = selectedValue;
+      }
+
+      // Listen for changes to the select element
+      document.getElementById("justify-property").addEventListener("change", changeJustifyContent);
+    </script>
+  </body>
+</html>
