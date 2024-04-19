@@ -272,6 +272,8 @@ hr {
   border-radius: 8px;
   width: 400px;
   display: block;
+  color: var(--highlighter-text);
+  border: 1px solid var(--highlighter-text);
   background-color: var(--background-color);
   outline: var(--highlighter-text);
 
@@ -368,7 +370,7 @@ hr {
   border-radius: 8px;
   width: 360px;
   background-color: var(--background-color);
-  color: var(--highlighter);
+  color: var(--highlighter-text);
 
   &:focus {
     outline: none;
