@@ -301,6 +301,10 @@ hr {
 
 /* Blog - Card */
 
+.visible-on-hover {
+  display: none;
+}
+
 .blog-holder {
   display: flex;
   flex-wrap: wrap;
@@ -324,6 +328,14 @@ hr {
   &:hover {
     transform: scale(1.02);
   }
+
+  &:hover .visible-on-hover {
+    display: block;
+  }
+}
+
+.blog-card a {
+  text-decoration: none;
 }
 
 /* Coffee bar */
